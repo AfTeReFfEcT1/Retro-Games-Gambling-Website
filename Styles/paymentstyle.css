@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.balance-section,
+.recent-activities,
+.card-info {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.balance-section h2,
+.recent-activities h2,
+.card-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.balance-section .balance {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.balance-section input,
+.card-info input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #444444;
+    background-color: #3e3e3e;
+    color: #ffffff;
+}
+
+.balance-section .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.balance-section .deposit,
+.balance-section .withdraw,
+.card-info .submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444444;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.balance-section .deposit:hover,
+.balance-section .withdraw:hover,
+.card-info .submit:hover {
+    background-color: #555555;
+}
+
+.recent-activities p {
+    margin: 10px 0;
+}
+
+.card-info .card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-info .card-details input {
+    width: 48%;
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-links div {
+    text-align: left;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

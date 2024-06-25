@@ -1,0 +1,277 @@
+/* Add your styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px; /* Added padding-bottom to ensure footer doesn't overlap content */
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .menu a, nav .auth button {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav .auth button {
+    background-color: #007bff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav .auth .signup {
+    background-color: #28a745;
+}
+
+nav .auth button:hover {
+    opacity: 0.8;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero-content button {
+    background-color: #03dac6;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero-content button:hover {
+    opacity: 0.8;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.games {
+    margin: 2rem 0;
+}
+
+.games h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.game-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 18%;
+    margin: 1%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.categories {
+    margin: 2rem 0;
+}
+
+.categories h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-tags span {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.plans {
+    margin: 2rem 0;
+}
+
+.plans h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.plan-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.plan .price {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan ul li {
+    margin: 1rem 0;
+}
+
+.plan button {
+    background-color: #007bff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.plan button:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Added z-index to ensure footer is above other content */
+}
+
+footer .footer-content p {
+    margin: 0.5rem 0;
+}
+
+footer .footer-links a {
+    color: #007bff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.manage-credits {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.credits-form, .credits-summary {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    padding: 2rem;
+}
+
+.credits-form h2, .credits-summary h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-step {
+    margin-bottom: 2rem;
+}
+
+.form-step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-step label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-step input, .form-step select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.arcade-rules {
+    margin-top: 2rem;
+}
+
+.arcade-rules h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.arcade-rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.arcade-rules ul li {
+    margin: 0.5rem 0;
+}
