@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault842</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <style>
+        /* Additional styles for the header */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        .auth {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login, .signup {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login {
+            background-color: #f39c12;
+            color: #fff;
+        }
+
+        .login:hover {
+            background-color: #e67e22;
+        }
+
+        .signup {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .signup:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vault842</div>
+            <div class="menu">
+                <a href="#">Dashboard</a>
+                <a href="#">Games</a>
+                <a href="#">Wallet</a>
+                <a href="#">Payments</a>
+            </div>
+            <div class="auth">
+                <button class="login" onclick="location.href='Login/Login.html'">Log in</button>
+                <button class="signup" onclick="location.href='Login/index.html'">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explore exciting arcade games & win big!</h1>
+                <p>Claim your bonus now.</p>
+                <button class="play-now">Play now</button>
+            </div>
+            <div class="hero-image">
+                <img src="assets/cashs.png" alt="online-gaming">
+            </div>
+        </section>
+        <section class="games">
+            <h2>Choose Your Game</h2>
+            <div class="game-cards">
+                <div class="game-card" onclick="location.href='GameSelection/Horse/index.html'">
+                    <img src="assets/horr.jpg" alt="Horse Racer">
+                    <h3>Horse Racer</h3>
+                    <p>Try your luck in the legendary Horse betting, Popular around the world</p>
+                </div>
+                <div class="game-card" onclick="redirectToSpaceInvaders()">
+                    <img src="assets/spaceInvaders.jpeg" alt="Space Invaders">
+                    <h3>Space Invaders</h3>
+                    <p>Play and win in this retro shooting game</p>
+                    <p>LETS KILL SOME ALIENS!!!</p>
+                </div>
+                <div class="game-card">
+                    <img src="assets/marr.jpg" alt="Mario">
+                    <h3>Mario</h3>
+                    <p>Play Mario, The Ever Loved Retro Game and Win Big</p>
+                </div>
+            </div>
+        </section>
+        <section class="categories">
+            <h2>Game Categories</h2>
+            <div class="category-tags">
+                <span>Arcade</span>
+                <span>Racing</span>
+                <span>Adventure</span>
+                <span>Puzzle</span>
+                <span>Shooting</span>
+                <span>Strategy</span>
+                <span>Card</span>
+                <span>Sports</span>
+                <span>Trivia</span>
+                <span>Simulation</span>
+                <span>Casino</span>
+                <span>Board</span>
+                <span>Action</span>
+                <span>Multiplayer</span>
+                <span>Retro</span>
+                <span>Platformer</span>
+                <span>Arcade Racing</span>
+            </div>
+        </section>
+        <section class="plans">
+            <h2>Choose Your Game Plan</h2>
+            <div class="plan-options">
+                <div class="plan basic">
+                    <h3>Basic</h3>
+                    <p class="price">FREE</p>
+                    <ul>
+                        <li>Up to 3 games</li>
+                        <li>Limited credits</li>
+                        <li>7 days trial</li>
+                    </ul>
+                    <button class="signup" onclick="location.href='Login/index.html'">Start For Free</button>
+                </div>
+                <div class="plan pro">
+                    <h3>Pro</h3>
+                    <p class="price">$100</p>
+                    <ul>
+                        <li>Unlimited games</li>
+                        <li>Unlimited credits</li>
+                        <li>7 days trial</li>
+                    </ul>
+                    <button>Upgrade to Pro</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Vault842</p>
+            <p>Your go-to arcade gaming platform since 2024</p>
+            <p>Vault842 © 2024</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Queries answered</a>
+            <a href="#">Support services</a>
+            <a href="#">Instructions</a>
+            <a href="#">Reach out to us</a>
+        </div>
+    </footer>
+</body>
+</html>
+
