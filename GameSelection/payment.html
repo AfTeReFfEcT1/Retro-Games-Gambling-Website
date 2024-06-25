@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault842 - Account Dashboard</title>
+    <link rel="stylesheet" href="../Styles/paymentstyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Vault842</div>
+            <div class="menu">
+                <a href="#">Homepage</a>
+                <a href="#">Games Selection</a>
+                <a href="#">Account Dashboard</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="dashboard">
+            <div class="balance-section">
+                <h2>Account Balance</h2>
+                <p class="balance">$<span id="account-balance">Loading...</span></p>
+                <input type="text" id="amount-input" placeholder="Enter amount">
+                <div class="buttons">
+                    <button class="deposit" onclick="handleDeposit()">Deposit</button>
+                    <button class="withdraw" onclick="handleWithdraw()">Withdraw</button>
+                </div>
+            </div>
+            <div class="recent-activities">
+                <h2>Recent Game Activities</h2>
+                <p>Won $150 on Blackjack</p>
+                <p>Lost $50 on Roulette</p>
+                <p>Won $200 on Poker</p>
+                <p>Lost $30 on Slots</p>
+            </div>
+            <div class="card-info">
+                <h2>Credit/Debit Card Information</h2>
+                <input type="text" placeholder="Card Number">
+                <div class="card-details">
+                    <input type="text" placeholder="Expiry Date">
+                    <input type="text" placeholder="CVV">
+                </div>
+                <input type="text" placeholder="Cardholder Name">
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <div class="account-settings">
+                <h3>Account Settings</h3>
+                <a href="#">Profile</a>
+                <a href="#">Security</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="responsible-gambling">
+                <h3>Responsible Gambling</h3>
+                <a href="#">Limits</a>
+                <a href="#">Self-Exclusion</a>
+                <a href="#">Help & Support</a>
+            </div>
+        </div>
+        <p>&copy; 2024 Vault842. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('http://localhost:5000/gaminghome', {
+                credentials: 'include'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.balance !== undefined) {
+                    document.getElementById('wallet-balance').textContent = data.balance.toFixed(2);
+                } else {
+                    console.error('Error fetching balance:', data.error);
+                    document.getElementById('wallet-balance').textContent = '1.00';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching balance:', error);
+                document.getElementById('wallet-balance').textContent = '2.00';
+            });
+        });
+
+        function handleDeposit() {
+            const amount = parseFloat(document.getElementById('amount-input').value);
+            if (isNaN(amount) || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+
+            fetch('http://localhost:5000/deposit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include',
+                body: JSON.stringify({ amount: amount })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.new_balance !== undefined) {
+                    document.getElementById('wallet-balance').textContent = data.new_balance.toFixed(2);
+                    document.getElementById('amount-input').value = '';
+                } else {
+                    console.error('Error depositing:', data.error);
+                }
+            })
+            .catch(error => console.error('Error depositing:', error));
+        }
+
+        function handleWithdraw() {
+            const amount = parseFloat(document.getElementById('amount-input').value);
+            if (isNaN(amount) || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+
+            fetch('http://localhost:5000/withdraw', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include',
+                body: JSON.stringify({ amount: amount })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.new_balance !== undefined) {
+                    document.getElementById('wallet-balance').textContent = data.new_balance.toFixed(2);
+                    document.getElementById('amount-input').value = '';
+                } else {
+                    console.error('Error withdrawing:', data.error);
+                }
+            })
+            .catch(error => console.error('Error withdrawing:', error));
+        }
+    </script>
+</body>
+</html>
